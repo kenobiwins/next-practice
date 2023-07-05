@@ -16,19 +16,12 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@types/node": "20.3.3",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.8",
     "next": "13.4.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.1.6"
+    "react-dom": "18.2.0"
   },
   "browserslist": {
     "production": [
@@ -42,20 +35,28 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
+  "devDependencies": {   
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
-    "@storybook/addon-essentials": "7.0.25",
-    "@storybook/addon-interactions": "7.0.25",
-    "@storybook/addon-links": "7.0.25",
-    "@storybook/blocks": "7.0.25",
-    "@storybook/nextjs": "7.0.25",
-    "@storybook/react": "7.0.25",
-    "@storybook/testing-library": "0.0.14-next.2",
     "@types/babel__traverse": "^7.20.1",
+    "@types/next": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
     "cross-env": "^7.0.3",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8"
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^3.0.0",
+    "husky": "^8.0.3",    
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "typescript": "4.6.3"
   },
   "resolutions": {
     "webpack": "^5"
