@@ -1,9 +1,10 @@
 import { IMockDataType } from '@/types';
 
-export async function getPosts(): Promise<IMockDataType[]> {
+//'https://jsonplaceholder.typicode.com/posts',
+export async function getPosts(): Promise<{ posts: IMockDataType[] }> {
   const response = await fetch(
-    'https://jsonplaceholder.typicode.com/posts',
-    { next: { revalidate: 30, tags: ['post'] } } // params object
+    '/api/posts',
+    { next: { revalidate: 30 } } // params object
   );
 
   if (!response.ok) {
@@ -15,10 +16,10 @@ export async function getPosts(): Promise<IMockDataType[]> {
 
 export async function getPostBySearch(
   search: string
-): Promise<IMockDataType[]> {
+): Promise<{ posts: IMockDataType[] }> {
   const response = await fetch(
-    'https://jsonplaceholder.typicode.com/posts?q=' + search,
-    { next: { revalidate: 30, tags: ['post'] } } // params object
+    '/api/posts?q=' + search,
+    { next: { revalidate: 30 } } // params object
   );
 
   if (!response.ok) {

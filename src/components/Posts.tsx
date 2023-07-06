@@ -25,13 +25,16 @@ const Posts = () => {
   //   }, [getAllPosts]);
 
   // SWR like RTK query but develops by vercel
-  const { isLoading, data: posts } = useSWR(POSTS_KEY, getPosts);
+  const {
+    isLoading,
+    data,
+  } = useSWR(POSTS_KEY, getPosts);
 
   return isLoading ? (
     <h3>loading...</h3>
   ) : (
     <ul>
-      {posts?.map((post) => (
+      {data?.posts?.map((post) => (
         <li key={post.id}>
           <Link href={`/blog/${post.id}`}>{post.title}</Link>
         </li>
