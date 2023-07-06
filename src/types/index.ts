@@ -4,3 +4,8 @@ export interface IMockDataType {
   title: string;
   body: string;
 }
+
+export interface INavItemType {
+  title: string;
+  link: string;
+}

@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { INavItemType } from '@/types';
+import { Navigation } from '@/components';
 
 enum ROUTES {
   HOME = '/',
@@ -6,7 +7,7 @@ enum ROUTES {
   BLOG = '/blog',
 }
 
-const navItems: { title: string; link: ROUTES }[] = [
+const navItems: INavItemType[] = [
   {
     title: 'home',
     link: ROUTES.HOME,
@@ -24,15 +25,7 @@ const navItems: { title: string; link: ROUTES }[] = [
 const Header = () => {
   return (
     <header>
-      <nav>
-        <ul>
-          {navItems.map((item) => (
-            <li key={item.link}>
-              <Link href={item.link}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Navigation links={navItems} />
     </header>
   );
 };
