@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
-import { Header, Footer } from '@/components';
+import { Header, Footer, Providers } from '@/components';
 import Head from 'next/head';
 
 const roboto = Roboto({
@@ -32,9 +32,11 @@ export default function RootLayout({
         }}
         className={roboto.className}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
