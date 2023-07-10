@@ -14,7 +14,7 @@ const usePosts = create<IUsePosts>((set) => ({
   isLoading: false,
   getAllPosts: async () => {
     set({ isLoading: true });
-    const { posts } = await getPosts();
+    const  posts  = await getPosts();
     set({ posts, isLoading: false });
   },
   getPostBySearch: async (search) => {
